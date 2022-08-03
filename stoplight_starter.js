@@ -33,34 +33,39 @@ const LIGHTS = {
 
 stopLight = ( vehicleType, speed, lightColor) => {
     // your code here
+    value = '';
     if (vehicleType == 'bicycle') {
         if (lightColor == 'green') {
-            console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' pass');
+            value = 'pass';
         } else {
-            console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' failed');
+            value = 'failed';
         }
+        console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' ' + value);
     } else if (vehicleType == 'private') {
         if (lightColor == 'yellow' && speed < 20) {
-            console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' pass');
+            value='pass';
         } else if (lightColor == 'green') {
-            console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' pass');
+            value='pass';
         } else {
-            console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' failed');
+            value='failed';
         }
+        console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' ' + value);
     } else if (vehicleType == 'public') {
         if (lightColor == 'white') {
-            console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' pass');
+            value='pass';
         } else {
-            console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' failed');
+            value='failed';
         }
+        console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' ' + value);
     } else if (vehicleType == 'emergency') {
         if (lightColor == ('yellow' || 'white') && speed < 30) {
-            console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' pass');
+            value='pass';
         } else if (lightColor == 'red' && speed < 20) {
-            console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' pass');
+            value='pass';
         } else {
-            console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' failed');
+            value='failed';
         }
+        console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' ' + value);
     } else {
         console.log(vehicleType + ' ' + speed + ' ' + lightColor + ' failed');
     }
