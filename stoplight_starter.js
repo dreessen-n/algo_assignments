@@ -97,5 +97,3 @@ stopLight('private', 10, 'yellow');
 stopLight('emergency', 15, 'yellow');
 stopLight('public', 15, 'white');
 
-
-
