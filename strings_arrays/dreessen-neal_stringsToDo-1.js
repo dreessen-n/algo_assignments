@@ -74,6 +74,7 @@ str6 = nonSpaces("hello world!");
 console.log(str6);
 
 // Remove Shorter Strings
+
 function rmShorterStrings(arr, val) {
     newArr = [];
     for (var i = 0; i < arr.length; i++) {
