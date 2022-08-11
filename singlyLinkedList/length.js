@@ -27,6 +27,15 @@ class singlyLinkedList {
         }
         return false
     }
+    length() {
+        let runner=this.head;
+        let count=0;
+        while(runner != null) {
+            count += 1;
+            runner=runner.next;
+        }
+        return count;
+    }
 }
 
 // Create an empty singlyLinkedList
@@ -39,6 +48,8 @@ mySLL.addFront(3);
 mySLL.addFront(4);
 mySLL.addFront(5);
 
+// CONTAINS ASSIGNMENT
+//
 // Should return true
 console.log(mySLL.contains(2));
 
@@ -54,4 +65,13 @@ console.log(mySLL.contains(-2));
 // Should return false
 console.log(mySLL.contains(13));
 
+// Should produce length 5
+console.log('length: ' + mySLL.length());
+
+// LENGTH ASSIGNMENT
+//
+// add 2 more values to the mySLL and then console.log; then expect output 7
+mySLL.addFront(100);
+mySLL.addFront(50);
+console.log('length: ' + mySLL.length());
 
